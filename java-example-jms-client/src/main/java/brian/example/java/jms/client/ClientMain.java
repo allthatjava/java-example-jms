@@ -12,7 +12,7 @@ public class ClientMain {
         Connection connection = null;
         try {
             InitialContext ctx = new InitialContext();
-            ActiveMQConnectionFactory cf = new ActiveMQConnectionFactory("tcp://localhost:61616");
+            ActiveMQConnectionFactory cf = new ActiveMQConnectionFactory("tcp://192.168.99.100:61616");
             connection = cf.createConnection();
             Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             Destination destination = session.createQueue("inbound.queue");
